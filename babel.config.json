@@ -1,0 +1,20 @@
+{
+	"presets": [
+		["@babel/preset-env", {//preset-env sirve para compilar nuestro codigo fuente JS
+			"corejs": 3.19,
+		//indicamos la version corejs (que si no me equivoco es con la que instalamos los polyfills)
+		"useBuiltIns":"usage"
+		//con "useBuiltIns" indicamos la forma en que queremos que corejs le inyecte los polyfills a mi JS
+		//y la forma en este caso es "usage": inspecciona cada uno de los elementos de mi JS
+		//y si encuentra alguna sintaxis moderna, le incluye ese polyfills a ese archivo exclusivo
+			}
+		],
+		["@babel/preset-react", { //preset-react sirve para
+			"runtime": "automatic"
+		}] //con la implementacion de runtime "automatic" ya no es necesario importar react a cada archivo JSX
+	]
+}
+
+
+
+
